@@ -11,7 +11,7 @@ const store = useStore()
 
 store.commit('user', {
   name: 'Sarra test',
-  email: 'sarrachamakh@gmail.com'
+  email: 'sarratest@gmail.com'
 })
 
 const isAsideLgActive = computed(() => store.state.isAsideLgActive)
