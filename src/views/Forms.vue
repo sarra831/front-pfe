@@ -16,12 +16,12 @@ import BottomOtherPagesSection from '@/components/BottomOtherPagesSection.vue'
 import TitledSection from '@/components/TitledSection.vue'
 import TitleSubBar from '@/components/TitleSubBar.vue'
 
-const titleStack = ref(['Admin', 'Forms'])
+const titleStack = ref(['Admin', 'Ajouter'])
 
 const selectOptions = [
-  { id: 1, label: 'Business development' },
-  { id: 2, label: 'Marketing' },
-  { id: 3, label: 'Sales' }
+  { id: 1, label: 'Visiteur' },
+  { id: 2, label: 'Securite' },
+  { id: 3, label: 'Societe' }
 ]
 
 const form = reactive({
@@ -46,21 +46,18 @@ const submit = () => {
 </script>
 
 <template>
-  <title-bar :title-stack="titleStack" />
-  <hero-bar>Forms</hero-bar>
-
   <main-section>
     <title-sub-bar
       :icon="mdiBallotOutline"
-      title="Forms example"
+      title="Ajouter des Profils"
     />
     <card-component
-      title="Forms"
+      title="Ajouter"
       :icon="mdiBallot"
       form
       @submit.prevent="submit"
     >
-      <field label="Grouped with icons">
+      <field label="Insérer les informations">
         <control
           v-model="form.name"
           :icon="mdiAccount"
@@ -73,17 +70,27 @@ const submit = () => {
       </field>
 
       <field
-        label="With help line"
-        help="Do not enter the leading zero"
+        label="Numero du Telephone"
+        help="Chemin obligatoire"
       >
         <control
           v-model="form.phone"
           type="tel"
-          placeholder="Your phone number"
+          placeholder="Saisir le numero"
+        />
+      </field>
+      <field
+        label="Matricule Fiscale"
+        help="Chemin obligatoire"
+      >
+        <control
+          v-model="form.matricule"
+          type="tel"
+          placeholder="Saisir le numero"
         />
       </field>
 
-      <field label="Dropdown">
+      <field label="Role">
         <control
           v-model="form.department"
           :options="selectOptions"
@@ -93,12 +100,12 @@ const submit = () => {
       <divider />
 
       <field
-        label="Question"
-        help="Your question. Max 255 characters"
+        label="Description "
+        help="mmkn n7ot merticule fiscale hne ? "
       >
         <control
           type="textarea"
-          placeholder="Explain how we can help you"
+          placeholder="nbadelha ? matricule ? "
         />
       </field>
 
@@ -108,21 +115,17 @@ const submit = () => {
         <jb-button
           type="submit"
           color="info"
-          label="Submit"
+          label="Ajouter"
         />
         <jb-button
           type="reset"
           color="info"
           outline
-          label="Reset"
+          label="Réinitialiser"
         />
       </jb-buttons>
     </card-component>
   </main-section>
-
-  <titled-section>
-    Custom elements
-  </titled-section>
 
   <main-section>
     <card-component
