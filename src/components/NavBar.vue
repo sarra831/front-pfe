@@ -7,9 +7,6 @@ import {
   mdiClose,
   mdiDotsVertical,
   mdiMenu,
-  mdiClockOutline,
-  mdiCloud,
-  mdiCrop,
   mdiAccount,
   mdiCogOutline,
   mdiEmail,
@@ -110,7 +107,6 @@ const menuOpenLg = () => {
             <nav-bar-item to="/dashboard">
               <nav-bar-item-label
                 label="Dashboard"
-                
               />
             </nav-bar-item>
             <nav-bar-item to="/tables">
