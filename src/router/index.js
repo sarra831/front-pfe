@@ -59,29 +59,12 @@ const routes = [
   },
   {
     meta: {
-      title: 'Responsive layout'
-    },
-    path: '/responsive',
-    name: 'responsive',
-    component: () => import(/* webpackChunkName: "responsive" */ '@/views/Responsive.vue')
-  },
-  {
-    meta: {
       title: 'Login',
       fullScreen: true
     },
-    path: '/login',
+    path: '/index',
     name: 'login',
     component: () => import(/* webpackChunkName: "login" */ '@/views/Login.vue')
-  },
-  {
-    meta: {
-      title: 'Error',
-      fullScreen: true
-    },
-    path: '/error',
-    name: 'error',
-    component: () => import(/* webpackChunkName: "error" */ '@/views/Error.vue')
   }
 ]
 

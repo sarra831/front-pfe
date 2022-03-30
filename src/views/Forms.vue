@@ -1,5 +1,5 @@
 <script setup>
-import { reactive } from 'vue'
+import { ref, reactive } from 'vue'
 import { mdiBallot, mdiBallotOutline, mdiAccount, mdiMail } from '@mdi/js'
 import MainSection from '@/components/MainSection.vue'
 import TitleBar from '@/components/TitleBar.vue'
@@ -8,11 +8,15 @@ import CheckRadioPicker from '@/components/CheckRadioPicker.vue'
 import FilePicker from '@/components/FilePicker.vue'
 import HeroBar from '@/components/HeroBar.vue'
 import Field from '@/components/Field.vue'
+import Control from '@/components/Control.vue'
+import Divider from '@/components/Divider.vue'
 import JbButton from '@/components/JbButton.vue'
 import JbButtons from '@/components/JbButtons.vue'
 import BottomOtherPagesSection from '@/components/BottomOtherPagesSection.vue'
 import TitledSection from '@/components/TitledSection.vue'
 import TitleSubBar from '@/components/TitleSubBar.vue'
+
+const titleStack = ref(['Admin', 'Forms'])
 
 const selectOptions = [
   { id: 1, label: 'Business development' },
@@ -28,6 +32,7 @@ const form = reactive({
   subject: '',
   question: ''
 })
+
 const customElementsForm = reactive({
   checkbox: ['lorem'],
   radio: 'one',
@@ -42,15 +47,15 @@ const submit = () => {
 
 <template>
   <title-bar :title-stack="titleStack" />
-  <hero-bar>Ajouter</hero-bar>
+  <hero-bar>Forms</hero-bar>
 
   <main-section>
     <title-sub-bar
       :icon="mdiBallotOutline"
-      title="Ajouter les profiles."
+      title="Forms example"
     />
     <card-component
-      title="Saisir les donnees"
+      title="Forms"
       :icon="mdiBallot"
       form
       @submit.prevent="submit"

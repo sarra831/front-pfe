@@ -27,10 +27,12 @@ const titleStack = ref(['Admin', 'Tables'])
 
     <title-sub-bar
       :icon="mdiTableBorder"
-      title="Variante enveloppée "
+      title="Listes de Visiteur "
     />
     <card-component
       class="mb-6"
+      title="Visiteurs"
+      :icon="mdiAccountMultiple"
       has-table
     >
       <clients-table checkable />

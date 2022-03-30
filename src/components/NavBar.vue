@@ -20,7 +20,6 @@ import NavBarItem from '@/components/NavBarItem.vue'
 import NavBarItemLabel from '@/components/NavBarItemLabel.vue'
 import NavBarMenu from '@/components/NavBarMenu.vue'
 import Divider from '@/components/Divider.vue'
-import UserAvatar from '@/components/UserAvatar.vue'
 import Icon from '@/components/Icon.vue'
 import NavBarSearch from '@/components/NavBarSearch.vue'
 
@@ -108,23 +107,21 @@ const menuOpenLg = () => {
           />
 
           <template #dropdown>
-            <nav-bar-item>
+            <nav-bar-item to="/dashboard">
               <nav-bar-item-label
-                :icon="mdiClockOutline"
-                label="Item One"
+                label="Dashboard"
+                
               />
             </nav-bar-item>
-            <nav-bar-item>
+            <nav-bar-item to="/tables">
               <nav-bar-item-label
-                :icon="mdiCloud"
-                label="Item Two"
+                label="Tables"
               />
             </nav-bar-item>
             <divider nav-bar />
-            <nav-bar-item>
+            <nav-bar-item to="/forms">
               <nav-bar-item-label
-                :icon="mdiCrop"
-                label="Item Last"
+                label="Ajouter"
               />
             </nav-bar-item>
           </template>
